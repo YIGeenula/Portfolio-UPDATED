@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" oncontextmenu="return false">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +27,10 @@
         }
         .preview-container {
             background: linear-gradient(135deg, #00ffcc20 0%, #0088ff20 100%);
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
         }
         .preview-overlay {
             background: linear-gradient(to bottom, transparent 0%, rgba(22, 24, 25, 0.7) 100%);
@@ -38,6 +42,14 @@
         }
         .preview-container:hover .lock-overlay {
             opacity: 1;
+        }
+        img {
+            pointer-events: none;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
         }
     </style>
 </head>
@@ -100,5 +112,40 @@
     <p class="fixed bottom-8 text-gray-500 text-sm px-6 text-center">
         © 2024 YG CodeBlaze. All rights reserved.
     </p>
+
+    <script>
+        // Disable right click
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Disable keyboard shortcuts
+        document.addEventListener('keydown', function(event) {
+            // Prevent Ctrl+S, Ctrl+U, Ctrl+Shift+I, F12
+            if (
+                (event.ctrlKey && event.key === 's') || 
+                (event.ctrlKey && event.key === 'u') ||
+                (event.ctrlKey && event.shiftKey && event.key === 'i') ||
+                event.key === 'F12'
+            ) {
+                event.preventDefault();
+            }
+        });
+
+        // Disable drag and drop
+        document.addEventListener('dragstart', function(event) {
+            event.preventDefault();
+        });
+
+        // Show warning message when trying to copy
+        document.addEventListener('copy', function(event) {
+            event.preventDefault();
+        });
+
+        // Disable text selection
+        document.addEventListener('selectstart', function(event) {
+            if (event.target.nodeName !== 'INPUT' && event.target.nodeName !== 'TEXTAREA') {
+                event.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html> 
