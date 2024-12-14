@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Add this right after opening <body> tag -->
+    <div id="splash-screen" class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#161819]">
+        <div class="text-center">
+            <!-- Logo Container -->
+            <div class="splash-logo mb-8">
+                <img src="images/Portfolio-Navbar-Logo.png" alt="YGCodeBlaze Logo" class="h-32 md:h-40 mx-auto">
+            </div>
+            <!-- Dots Loading Animation -->
+            <div class="loading-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-[#1e2124]/90 backdrop-blur-md z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#" class="text-white font-bold text-2xl flex items-center">
+                    <img src="images/Portfolio-Navbar-Logo.png" alt="YGCodeBlaze Logo" class="h-14">
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-[#00ffcc] transition-colors nav-link inline-block">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-[#00ffcc] transition-colors nav-link inline-block">About</a>
+                    <a href="#projects" class="text-gray-300 hover:text-[#00ffcc] transition-colors nav-link inline-block">Projects</a>
+                    <a href="#skills" class="text-gray-300 hover:text-[#00ffcc] transition-colors nav-link inline-block">Skills</a>
+                    <a href="#contact" class="text-gray-300 hover:text-[#00ffcc] transition-colors nav-link inline-block">Contact</a>
+                    <!-- Resume Button -->
+                    <a href="#" class="bg-[#00ffcc] text-[#1e2124] px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300">
+                        Resume
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white hover:text-[#00ffcc] transition-colors" id="menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-[#1e2124]/95 backdrop-blur-md" id="mobile-menu">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#home" class="block text-gray-300 hover:text-[#00ffcc] transition-colors py-2 nav-link">Home</a>
+                <a href="#about" class="block text-gray-300 hover:text-[#00ffcc] transition-colors py-2 nav-link">About</a>
+                <a href="#projects" class="block text-gray-300 hover:text-[#00ffcc] transition-colors py-2 nav-link">Projects</a>
+                <a href="#skills" class="block text-gray-300 hover:text-[#00ffcc] transition-colors py-2 nav-link">Skills</a>
+                <a href="#contact" class="block text-gray-300 hover:text-[#00ffcc] transition-colors py-2 nav-link">Contact</a>
+                <a href="#" class="inline-block bg-[#00ffcc] text-[#1e2124] px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300">
+                    Resume
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen flex items-center bg-[#161819] px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col-reverse md:flex-row items-center justify-between">
+                <!-- Left content -->
+                <div class="text-white mt-8 md:mt-0 pl-8">
+                    <p class="text-4xl md:text-5xl mb-2 font-bold">Hi there...</p>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-2 leading-none">
+                        I'm Yasiru Isum Geenula
+                    </h1>
+                    <p class="text-3xl md:text-4xl font-bold">
+                        I'm skilled with <span class="text-[#00ffcc]" id="typed-text"></span>
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="flex space-x-6">
+                        <!-- Social icons remain the same -->
+                    </div>
+                </div>
+                <!-- Right content - Profile Image -->
+                <div class="w-64 h-64 md:w-96 md:h-96 relative">
+                    <div class="w-full h-full rounded-full overflow-hidden border-4 border-[#00ffcc] shadow-[0_0_30px_#00ffcc]">
+                        <img src="images/ProPic01.jpg" alt="Profile" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="min-h-screen flex items-center bg-[#1e2124] py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- Left side - Profile Image -->
+                <div class="md:w-1/2">
+                    <div class="w-64 h-64 md:w-96 md:h-96 relative mx-auto">
+                        <div class="w-full h-full rounded-full overflow-hidden border-4 border-[#00ffcc] shadow-[0_0_30px_#00ffcc]">
+                            <img src="images/ProPic02.jpg" alt="Profile" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                <!-- Right side - Content -->
+                <div class="md:w-1/2 text-white">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8">About Me</h2>
+                    <p class="text-lg leading-relaxed">
+                        Hi there, I'm Yasiru Isum Geenula, and I'm super passionate about software engineering and crafting websites. I specialize in WordPress, frontend development, and designing how things look and feel online. I'm all about creating smooth, easy-to-use digital experiences. I love paying attention to the little details and coming up with fresh ideas. I always strive to go above and beyond, even when I'm working alone. My goal? To keep honing my skills and making cool stuff on the web!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="min-h-screen flex items-center bg-[#161819] py-20">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-5xl font-bold text-white text-center mb-16">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Project Card 1 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#00ffcc] to-[#0088ff]">
+                    <img src="images/Proj01.png" alt="Mobile App UI" class="w-full h-full object-cover transition-all duration-500 group-hover:blur-sm">
+                    <!-- Hover Content -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0743FD]/95 via-[#0743FD]/80 to-transparent translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+                        <div class="h-full p-6 flex flex-col justify-center translate-y-5 text-white text-center">
+                            <h3 class="text-3xl font-bold mb-3">Messaging App</h3>
+                            <p class="text-sm text-white/90 mb-4">
+                                A modern messaging app simplifies communication, offering helpful features for both individuals and businesses, enabling quick information sharing and smoother collaboration.
+                            </p>
+                            <a href="#" class="inline-block bg-white text-black px-8 py-3 rounded-full mx-auto hover:bg-opacity-90 transition-all duration-300">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#00ffcc] to-[#0088ff]">
+                    <img src="images/Proj02.png" alt="Desktop App" class="w-full h-full object-cover transition-all duration-500 group-hover:blur-sm">
+                    <!-- Hover Content -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0743FD]/95 via-[#0743FD]/80 to-transparent translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+                        <div class="h-full p-6 flex flex-col justify-center translate-y-5 text-white text-center">
+                            <h3 class="text-3xl font-bold mb-3">Gaming Client</h3>
+                            <p class="text-sm text-white/90 mb-4">
+                                A gaming platform provides easy access to many fun experiences, giving players lots of options and ensuring everyone has a great time playing games.
+                            </p>
+                            <a href="#" class="inline-block bg-white text-black px-8 py-3 rounded-full mx-auto hover:bg-opacity-90 transition-all duration-300">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#00ffcc] to-[#0088ff]">
+                    <img src="images/Proj03.png" alt="Web Design" class="w-full h-full object-cover transition-all duration-500 group-hover:blur-sm">
+                    <!-- Hover Content -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0743FD]/95 via-[#0743FD]/80 to-transparent translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+                        <div class="h-full p-6 flex flex-col justify-center translate-y-5 text-white text-center">
+                            <h3 class="text-3xl font-bold mb-3">Booking Website</h3>
+                            <p class="text-sm text-white/90 mb-4">
+                                A user-friendly booking website lets you easily reserve what you need, whether it's a hotel room, a table at a restaurant, or tickets for an event.
+                            </p>
+                            <a href="#" class="inline-block bg-white text-black px-8 py-3 rounded-full mx-auto hover:bg-opacity-90 transition-all duration-300">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- See More Button -->
+            <div class="flex justify-center mt-12">
+                <a href="#" class="bg-[#00ffcc] text-[#161819] px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300">
+                    See More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="min-h-screen flex items-center bg-[#1e2124] py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-white text-center mb-16">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Web Development Card -->
+                <div class="bg-[#1e2124] p-8 rounded-2xl skill-card">
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 flex items-center justify-center text-[#00ffcc]">
+                                <i class="fa-solid fa-code text-4xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Web Development</h3>
+                        </div>
+                        <p class="text-gray-300 text-sm">
+                            Proficient in building responsive and dynamic websites using modern web technologies, ensuring optimal performance and user experience.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Frontend Development Card -->
+                <div class="bg-[#1e2124] p-8 rounded-2xl skill-card">
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 flex items-center justify-center text-[#00ffcc]">
+                                <i class="fa-brands fa-wordpress text-4xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Frontend Development</h3>
+                        </div>
+                        <p class="text-gray-300 text-sm">
+                            Skilled in frontend development using WordPress, proficient in crafting dynamic and visually appealing websites with HTML, CSS, and JavaScript integration.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- UI/UX Design Card -->
+                <div class="bg-[#1e2124] p-8 rounded-2xl skill-card">
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 flex items-center justify-center text-[#00ffcc]">
+                                <i class="fa-brands fa-figma text-4xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">UI/UX Design</h3>
+                        </div>
+                        <p class="text-gray-300 text-sm">
+                            Experienced in UI/UX design with Figma, adept at creating intuitive and visually stunning interfaces that enhance user engagement and satisfaction.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="min-h-screen flex items-center bg-[#161819] py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-white text-center mb-16">Contact Me</h2>
+            <div class="max-w-xl mx-auto">
+                <form id="contact-form" class="space-y-6">
+                    <!-- Name Input -->
+                    <div class="relative">
+                        <input type="text" id="name" name="name" placeholder="Your Name" 
+                            class="w-full px-6 py-4 bg-white rounded-xl text-center text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00ffcc]" 
+                            required>
+                    </div>
+
+                    <!-- Email Input -->
+                    <div class="relative">
+                        <input type="email" id="email" name="email" placeholder="Your Email" 
+                            class="w-full px-6 py-4 bg-white rounded-xl text-center text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00ffcc]" 
+                            required>
+                    </div>
+
+                    <!-- Message Input -->
+                    <div class="relative">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="6" 
+                            class="w-full px-6 py-4 bg-white rounded-xl text-center text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00ffcc] resize-none" 
+                            required></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="flex justify-center mt-8">
+                        <button type="submit" 
+                            class="bg-[#00ffcc] text-[#161819] px-12 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-lg">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#1e2124] text-white py-16">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <!-- Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Brand Section -->
+                <div class="space-y-3">
+                    <h3 class="text-xl font-bold">Yasiru Isum</h3>
+                    <p class="text-gray-400 text-sm">
+                        Creating digital experiences that make a difference. Let's build something amazing together.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-[#00ffcc] transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-[#00ffcc] transition-colors">About</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-[#00ffcc] transition-colors">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-[#00ffcc] transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400 flex items-center gap-2">
+                            <i class="fas fa-envelope text-[#00ffcc]"></i>
+                            <a href="mailto:your.email@example.com" class="hover:text-[#00ffcc] transition-colors">your.email@example.com</a>
+                        </li>
+                        <li class="text-gray-400 flex items-center gap-2">
+                            <i class="fas fa-phone text-[#00ffcc]"></i>
+                            <a href="tel:+1234567890" class="hover:text-[#00ffcc] transition-colors">+1 234 567 890</a>
+                        </li>
+                        <li class="text-gray-400 flex items-center gap-2">
+                            <i class="fas fa-location-dot text-[#00ffcc]"></i>
+                            <span>Your Location, Country</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social Links -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold">Follow Me</h4>
+                    <div class="flex justify-between">
+                        <a href="#" class="text-gray-400 hover:text-[#00ffcc] transition-colors text-2xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#00ffcc] transition-colors text-2xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#00ffcc] transition-colors text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#00ffcc] transition-colors text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+                <p>&copy; 2024. YGCodeBlaze. All rights reserved. Designed and Developed by Yasiru Isum Geenula | YG CodeBlaze.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
