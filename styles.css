@@ -30,14 +30,19 @@ section {
 
 .group {
     aspect-ratio: 4/5;
-    padding: 0.5rem;
+    padding: 0;
     max-width: 320px;
     width: 100%;
     margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
 .group img {
     transition: all 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 } 
 
 /* Skills card styles */
@@ -180,5 +185,22 @@ section {
     40% { 
         transform: scale(1);
     }
+}
+
+/* Add these styles for the scroll-to-top button */
+#scroll-to-top {
+    z-index: 99;
+    transform: translateY(20px);
+}
+
+#scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#scroll-to-top:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 255, 204, 0.3);
 }
  

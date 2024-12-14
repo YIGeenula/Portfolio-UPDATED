@@ -9,6 +9,26 @@ document.addEventListener('DOMContentLoaded', () => {
             splashScreen.remove();
         }, 500);
     }, 2000);
+
+    // Scroll to top functionality
+    const scrollButton = document.getElementById('scroll-to-top');
+    
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            scrollButton.classList.add('visible');
+        } else {
+            scrollButton.classList.remove('visible');
+        }
+    });
+
+    // Scroll to top when button is clicked
+    scrollButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 });
 
 class TypeWriter {
