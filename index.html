@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>YG CodeBlaze</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="shortcut icon" type="x-icon" href="images/Portfolio-Tabicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -29,15 +29,15 @@
 
     <!-- Navigation -->
     <nav class="fixed w-full bg-[#1e2124]/90 backdrop-blur-md z-50">
-        <div class="container mx-auto px-6 py-4">
+        <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24 py-4">
             <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <a href="#" class="text-white font-bold text-2xl flex items-center">
+                <!-- Logo - removed padding-left since container already has padding -->
+                <a href="#" class="text-white font-bold text-2xl flex items-center -ml-2">
                     <img src="images/Portfolio-Navbar-Logo.png" alt="YGCodeBlaze Logo" class="h-14">
                 </a>
 
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
+                <!-- Desktop Menu - adjusted spacing and moved slightly right -->
+                <div class="hidden md:flex items-center space-x-10 -mr-2">
                     <a href="#home" class="text-gray-300 hover:text-[#00ffcc] transition-colors nav-link inline-block">Home</a>
                     <a href="#about" class="text-gray-300 hover:text-[#00ffcc] transition-colors nav-link inline-block">About</a>
                     <a href="#projects" class="text-gray-300 hover:text-[#00ffcc] transition-colors nav-link inline-block">Projects</a>
@@ -49,8 +49,8 @@
                     </a>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <button class="md:hidden text-white hover:text-[#00ffcc] transition-colors" id="menu-button">
+                <!-- Mobile Menu Button - moved slightly right -->
+                <button class="md:hidden text-white hover:text-[#00ffcc] transition-colors -mr-2" id="menu-button">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
@@ -58,7 +58,7 @@
 
         <!-- Mobile Menu -->
         <div class="hidden md:hidden bg-[#1e2124]/95 backdrop-blur-md" id="mobile-menu">
-            <div class="px-4 py-4 space-y-3">
+            <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24 py-4 space-y-3">
                 <a href="#home" class="block text-gray-300 hover:text-[#00ffcc] transition-colors py-2 nav-link">Home</a>
                 <a href="#about" class="block text-gray-300 hover:text-[#00ffcc] transition-colors py-2 nav-link">About</a>
                 <a href="#projects" class="block text-gray-300 hover:text-[#00ffcc] transition-colors py-2 nav-link">Projects</a>
@@ -72,11 +72,11 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="h-screen flex items-center bg-[#161819] px-6">
-        <div class="container mx-auto">
+    <section id="home" class="h-screen flex items-center bg-[#161819] px-6 md:px-12 lg:px-24">
+        <div class="container mx-auto max-w-7xl">
             <div class="flex flex-col-reverse md:flex-row items-center justify-between">
                 <!-- Left content -->
-                <div class="text-white mt-8 md:mt-0 pl-8">
+                <div class="text-white mt-8 md:mt-0 md:w-1/2">
                     <p class="text-4xl md:text-5xl mb-2 font-bold">Hi there...</p>
                     <h1 class="text-5xl md:text-6xl font-bold mb-2 leading-none">
                         I'm Yasiru Isum Geenula
@@ -85,13 +85,13 @@
                         I'm skilled with <span class="text-[#00ffcc]" id="typed-text"></span>
                     </p>
                     <!-- Social Icons -->
-                    <div class="flex space-x-6">
+                    <div class="flex space-x-6 mt-8">
                         <!-- Social icons remain the same -->
                     </div>
                 </div>
                 <!-- Right content - Profile Image -->
-                <div class="w-64 h-64 md:w-96 md:h-96 relative">
-                    <div class="w-full h-full rounded-full overflow-hidden border-4 border-[#00ffcc] shadow-[0_0_30px_#00ffcc]">
+                <div class="w-64 h-64 md:w-96 md:h-96 relative md:w-1/2 flex justify-center">
+                    <div class="w-full h-full rounded-full overflow-hidden border-4 border-[#00ffcc] shadow-[0_0_30px_#00ffcc] max-w-[384px]">
                         <img src="images/ProPic01.jpg" alt="Profile" class="w-full h-full object-cover">
                     </div>
                 </div>
@@ -100,8 +100,8 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="min-h-screen flex items-center bg-[#1e2124] py-20">
-        <div class="container mx-auto px-6">
+    <section id="about" class="min-h-screen flex items-center bg-[#1e2124] py-20 px-6 md:px-12 lg:px-24">
+        <div class="container mx-auto max-w-7xl">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <!-- Left side - Profile Image -->
                 <div class="md:w-1/2">
@@ -123,8 +123,8 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="min-h-screen flex items-center bg-[#161819] py-20">
-        <div class="container mx-auto px-6 max-w-6xl">
+    <section id="projects" class="min-h-screen flex items-center bg-[#161819] py-20 px-6 md:px-12 lg:px-24">
+        <div class="container mx-auto max-w-7xl">
             <h2 class="text-5xl font-bold text-white text-center mb-16">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 <!-- Project Card 1 -->
@@ -189,8 +189,8 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="min-h-screen flex items-center bg-[#1e2124] py-20">
-        <div class="container mx-auto px-6">
+    <section id="skills" class="min-h-screen flex items-center bg-[#1e2124] py-20 px-6 md:px-12 lg:px-24">
+        <div class="container mx-auto max-w-7xl">
             <h2 class="text-5xl font-bold text-white text-center mb-16">Skills</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- Web Development Card -->
@@ -242,8 +242,8 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="min-h-screen flex items-center bg-[#161819] py-20">
-        <div class="container mx-auto px-6">
+    <section id="contact" class="min-h-screen flex items-center bg-[#161819] py-20 px-6 md:px-12 lg:px-24">
+        <div class="container mx-auto max-w-7xl">
             <h2 class="text-5xl font-bold text-white text-center mb-16">Contact Me</h2>
             <div class="max-w-xl mx-auto">
                 <form id="contact-form" class="space-y-6">
@@ -280,8 +280,8 @@
         </div>
     </section>
 
-    <footer class="bg-[#1e2124] text-white py-16">
-        <div class="container mx-auto px-4 max-w-6xl">
+    <footer class="bg-[#1e2124] text-white py-16 px-6 md:px-12 lg:px-24">
+        <div class="container mx-auto max-w-7xl">
             <!-- Footer Content -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Brand Section -->
