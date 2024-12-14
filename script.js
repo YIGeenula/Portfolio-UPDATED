@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const splashScreen = document.getElementById('splash-screen');
-    
-    // Hide splash screen after animation completes
+    // Hide splash screen after 2 seconds
     setTimeout(() => {
-        splashScreen.classList.add('hide');
-        // Remove splash screen from DOM after fade out
+        const splashScreen = document.getElementById('splash-screen');
+        splashScreen.classList.add('hidden');
+        
+        // Remove splash screen from DOM after animation completes
         setTimeout(() => {
             splashScreen.remove();
         }, 500);
-    }, 2500); // Adjust timing as needed
+    }, 2000);
 });
 
 class TypeWriter {

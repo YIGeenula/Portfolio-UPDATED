@@ -5,25 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="x-icon" href="images/Portfolio-Tabicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-100">
-    <!-- Add this right after opening <body> tag -->
+    <!-- Update the splash screen HTML -->
     <div id="splash-screen" class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#161819]">
         <div class="text-center">
-            <!-- Logo Container -->
             <div class="splash-logo mb-8">
-                <img src="images/Portfolio-Navbar-Logo.png" alt="YGCodeBlaze Logo" class="h-32 md:h-40 mx-auto">
+                <img src="images/Portfolio-Navbar-Logo.png" alt="YGCodeBlaze Logo" class="h-32 md:h-40 mx-auto animate-pulse">
             </div>
-            <!-- Dots Loading Animation -->
-            <div class="loading-dots">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
+            <div class="loading-dots flex justify-center space-x-2">
+                <div class="dot w-4 h-4 bg-[#00ffcc] rounded-full"></div>
+                <div class="dot w-4 h-4 bg-[#00ffcc] rounded-full"></div>
+                <div class="dot w-4 h-4 bg-[#00ffcc] rounded-full"></div>
             </div>
         </div>
     </div>
