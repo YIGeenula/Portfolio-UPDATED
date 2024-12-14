@@ -286,7 +286,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Brand Section -->
                 <div class="space-y-3">
-                    <h3 class="text-xl font-bold">Yasiru Isum</h3>
+                    <h3 class="text-xl font-bold">YG CodeBlaze</h3>
                     <p class="text-gray-400 text-sm">
                         Creating digital experiences that make a difference. Let's build something amazing together.
                     </p>
@@ -355,5 +355,43 @@
     </button>
 
     <script src="script.js"></script>
+    <!-- Add this before closing body tag -->
+    <script>
+        // Mobile Menu Toggle
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Toggle menu on button click
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Toggle icon between bars and times
+            const icon = menuButton.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close menu when clicking a nav link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                // Reset icon to bars
+                const icon = menuButton.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+                // Reset icon to bars
+                const icon = menuButton.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
+        });
+    </script>
 </body>
 </html> 
