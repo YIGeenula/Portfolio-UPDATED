@@ -81,12 +81,23 @@
                     <h1 class="text-5xl md:text-6xl font-bold mb-2 leading-none">
                         I'm Yasiru Isum Geenula
                     </h1>
-                    <p class="text-3xl md:text-4xl font-bold">
+                    <p class="text-3xl md:text-4xl font-bold mb-8">
                         I'm skilled with <span class="text-[#00ffcc]" id="typed-text"></span>
                     </p>
                     <!-- Social Icons -->
-                    <div class="flex space-x-6 mt-8">
-                        <!-- Social icons remain the same -->
+                    <div class="flex gap-4">
+                        <a href="https://github.com/YIGeenula" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                            <i class="fab fa-github text-white text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yigeenula/" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                            <i class="fab fa-linkedin-in text-white text-xl"></i>
+                        </a>
+                        <a href="https://twitter.com/YGeenula" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                            <i class="fab fa-twitter text-white text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/geenuuss/" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                            <i class="fab fa-instagram text-white text-xl"></i>
+                        </a>
                     </div>
                 </div>
                 <!-- Right content - Profile Image -->
@@ -137,7 +148,7 @@
                             <p class="text-sm text-white/90 mb-4">
                                 A modern messaging app simplifies communication, offering helpful features for both individuals and businesses, enabling quick information sharing and smoother collaboration.
                             </p>
-                            <a href="#" class="inline-block bg-white text-black px-8 py-3 rounded-full mx-auto hover:bg-opacity-90 transition-all duration-300">
+                            <a href="https://www.figma.com/file/XhHQbjLXKEIGqvjNw87IlP/Chat-App?type=design&node-id=0%3A1&mode=design&t=NDdYVf61A7Qnsrup-1" target="_blank" class="inline-block bg-white text-black px-8 py-3 rounded-full mx-auto hover:bg-opacity-90 transition-all duration-300">
                                 Learn More
                             </a>
                         </div>
@@ -154,7 +165,7 @@
                             <p class="text-sm text-white/90 mb-4">
                                 A gaming platform provides easy access to many fun experiences, giving players lots of options and ensuring everyone has a great time playing games.
                             </p>
-                            <a href="#" class="inline-block bg-white text-black px-8 py-3 rounded-full mx-auto hover:bg-opacity-90 transition-all duration-300">
+                            <a href="https://www.figma.com/file/MpGYe0n2q7QHUSLoJAiFM9/Game-Client?type=design&node-id=0%3A1&mode=design&t=FwTU1SVZpXCMCF6a-1" target="_blank" class="inline-block bg-white text-black px-8 py-3 rounded-full mx-auto hover:bg-opacity-90 transition-all duration-300">
                                 Learn More
                             </a>
                         </div>
@@ -171,7 +182,7 @@
                             <p class="text-sm text-white/90 mb-4">
                                 A user-friendly booking website lets you easily reserve what you need, whether it's a hotel room, a table at a restaurant, or tickets for an event.
                             </p>
-                            <a href="#" class="inline-block bg-white text-black px-8 py-3 rounded-full mx-auto hover:bg-opacity-90 transition-all duration-300">
+                            <a href="https://www.figma.com/file/H9ICzxxsNMX7bnx0OYW7YU/Hotel-Booking?type=design&node-id=0%3A1&mode=design&t=FwTU1SVZpXCMCF6a-1" target="_blank" class="inline-block bg-white text-black px-8 py-3 rounded-full mx-auto hover:bg-opacity-90 transition-all duration-300">
                                 Learn More
                             </a>
                         </div>
@@ -245,37 +256,104 @@
     <section id="contact" class="min-h-screen flex items-center bg-[#161819] py-20 px-6 md:px-12 lg:px-24">
         <div class="container mx-auto max-w-7xl">
             <h2 class="text-5xl font-bold text-white text-center mb-16">Contact Me</h2>
-            <div class="max-w-xl mx-auto">
-                <form id="contact-form" class="space-y-6">
-                    <!-- Name Input -->
-                    <div class="relative">
-                        <input type="text" id="name" name="name" placeholder="Your Name" 
-                            class="w-full px-6 py-4 bg-white rounded-xl text-center text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00ffcc]" 
-                            required>
-                    </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Get In Touch -->
+                <div class="contact-card p-8">
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-semibold text-white mb-8">Get In Touch</h3>
+                        <div class="space-y-6">
+                            <!-- Email -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400">Email</p>
+                                    <p class="text-white">ygcodeblaze@gmail.com</p>
+                                </div>
+                            </div>
 
-                    <!-- Email Input -->
-                    <div class="relative">
-                        <input type="email" id="email" name="email" placeholder="Your Email" 
-                            class="w-full px-6 py-4 bg-white rounded-xl text-center text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00ffcc]" 
-                            required>
-                    </div>
+                            <!-- Phone -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400">Phone</p>
+                                    <p class="text-white">+94 71 269 6251</p>
+                                </div>
+                            </div>
 
-                    <!-- Message Input -->
-                    <div class="relative">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="6" 
-                            class="w-full px-6 py-4 bg-white rounded-xl text-center text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#00ffcc] resize-none" 
-                            required></textarea>
-                    </div>
+                            <!-- Location -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10">
+                                    <i class="fas fa-location-dot text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400">Location</p>
+                                    <p class="text-white">Kalutara, Sri Lanka</p>
+                                </div>
+                            </div>
 
-                    <!-- Submit Button -->
-                    <div class="flex justify-center mt-8">
-                        <button type="submit" 
-                            class="bg-[#00ffcc] text-[#161819] px-12 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300 shadow-lg">
-                            Submit
-                        </button>
+                            <!-- Social Media Icons -->
+                            <div class="pt-4 border-t border-gray-700">
+                                <p class="text-gray-400 mb-4">Follow Me</p>
+                                <div class="flex gap-4">
+                                    <a href="https://github.com/YIGeenula" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                                        <i class="fab fa-github text-white"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/yigeenula/" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                                        <i class="fab fa-linkedin-in text-white"></i>
+                                    </a>
+                                    <a href="https://twitter.com/YGeenula" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                                        <i class="fab fa-twitter text-white"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/geenuuss/" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                                        <i class="fab fa-instagram text-white"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </form>
+                </div>
+
+                <!-- Send Message -->
+                <div class="contact-card p-8">
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-semibold text-white mb-8">Send Message</h3>
+                        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="space-y-6">
+
+                            <input type="hidden" name="access_key" value="ccaf1f73-d67e-4944-be29-7272727e9ada">
+                            <!-- Name Input -->
+                            <div class="relative">
+                                <input type="text" id="name" name="name" placeholder="Your Name" 
+                                    class="w-full px-4 py-3 bg-[#282b30] rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00ffcc]" 
+                                    required>
+                            </div>
+
+                            <!-- Email Input -->
+                            <div class="relative">
+                                <input type="email" id="email" name="email" placeholder="Your Email" 
+                                    class="w-full px-4 py-3 bg-[#282b30] rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00ffcc]" 
+                                    required>
+                            </div>
+
+                            <!-- Message Input -->
+                            <div class="relative">
+                                <textarea id="message" name="message" placeholder="Your Message" rows="4" 
+                                    class="w-full px-4 py-3 bg-[#282b30] rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00ffcc] resize-none" 
+                                    required></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" 
+                                class="w-full bg-[#00ffcc] text-[#161819] py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -298,7 +376,7 @@
                     <ul class="space-y-2">
                         <li><a href="#home" class="text-gray-400 hover:text-[#00ffcc] transition-colors">Home</a></li>
                         <li><a href="#about" class="text-gray-400 hover:text-[#00ffcc] transition-colors">About</a></li>
-                        <li><a href="#projects" class="text-gray-400 hover:text-[#00ffcc] transition-colors">Projects</a></li>
+                        <li><a href="projects.html" target="_blank" class="text-gray-400 hover:text-[#00ffcc] transition-colors">Projects</a></li>
                         <li><a href="#contact" class="text-gray-400 hover:text-[#00ffcc] transition-colors">Contact</a></li>
                     </ul>
                 </div>
@@ -309,15 +387,15 @@
                     <ul class="space-y-2">
                         <li class="text-gray-400 flex items-center gap-2">
                             <i class="fas fa-envelope text-[#00ffcc]"></i>
-                            <a href="mailto:your.email@example.com" class="hover:text-[#00ffcc] transition-colors">your.email@example.com</a>
+                            <a href="mailto:ygcodeblaze@gmail.com" class="hover:text-[#00ffcc] transition-colors">ygcodeblaze@gmail.com</a>
                         </li>
                         <li class="text-gray-400 flex items-center gap-2">
                             <i class="fas fa-phone text-[#00ffcc]"></i>
-                            <a href="tel:+1234567890" class="hover:text-[#00ffcc] transition-colors">+1 234 567 890</a>
+                            <a href="tel:+94712696251" class="hover:text-[#00ffcc] transition-colors">+94 71 269 6251</a>
                         </li>
                         <li class="text-gray-400 flex items-center gap-2">
                             <i class="fas fa-location-dot text-[#00ffcc]"></i>
-                            <span>Your Location, Country</span>
+                            <span>Kalutara, Sri Lanka</span>
                         </li>
                     </ul>
                 </div>
@@ -326,16 +404,16 @@
                 <div class="space-y-3">
                     <h4 class="text-lg font-semibold">Follow Me</h4>
                     <div class="flex justify-between">
-                        <a href="#" class="text-gray-400 hover:text-[#00ffcc] transition-colors text-2xl">
+                        <a href="https://github.com/YIGeenula" target="_blank" class="text-gray-400 hover:text-[#00ffcc] transition-colors text-2xl">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-[#00ffcc] transition-colors text-2xl">
+                        <a href="https://www.linkedin.com/in/yigeenula/" target="_blank" class="text-gray-400 hover:text-[#00ffcc] transition-colors text-2xl">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-[#00ffcc] transition-colors text-2xl">
+                        <a href="https://twitter.com/YGeenula" target="_blank" class="text-gray-400 hover:text-[#00ffcc] transition-colors text-2xl">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-[#00ffcc] transition-colors text-2xl">
+                        <a href="https://www.instagram.com/geenuuss/" target="_blank" class="text-gray-400 hover:text-[#00ffcc] transition-colors text-2xl">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
