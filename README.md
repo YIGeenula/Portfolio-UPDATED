@@ -23,7 +23,7 @@ This is an **updated version** of my previous portfolio website. It has been enh
 
 
 ## 🔗 Live Demo
-Check out the live version of my updated portfolio here: **https://ygcodeblaze.netlify.app/**
+Check out the live version of my updated portfolio here: [YG CodeBlaze](https://ygcodeblaze.netlify.app/)
 
 ---
 
