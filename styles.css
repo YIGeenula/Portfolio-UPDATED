@@ -251,4 +251,63 @@ section {
                 0 0 20px rgba(0, 255, 204, 0.2);
     transition: all 0.3s ease;
 }
+
+/* Add these responsive styles to your styles.css */
+
+@media screen and (max-width: 1366px) {
+    /* Hero Section Adjustments */
+    #home {
+        min-height: 100vh;
+        padding-top: 5rem;
+    }
+
+    #home .text-5xl,
+    #home .text-6xl {
+        font-size: 2.5rem;
+    }
+
+    #home .text-4xl {
+        font-size: 2rem;
+    }
+
+    /* Profile Image Size Adjustment */
+    .w-96.h-96 {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    /* Section Padding Adjustments */
+    section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    /* Project Cards */
+    .group {
+        max-width: 280px;
+        aspect-ratio: 3/4;
+    }
+
+    /* Skills Cards */
+    .skill-card {
+        padding: 1.5rem;
+    }
+
+    /* Contact Form */
+    .contact-card {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    /* Project Cards */
+    .group {
+        max-width: 240px;
+    }
+}
  
