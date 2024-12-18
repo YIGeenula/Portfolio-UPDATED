@@ -252,6 +252,67 @@ section {
     transition: all 0.3s ease;
 }
 
+/* Snowflake Animation */
+.snowflake {
+    position: fixed;
+    top: -10px;
+    color: white;
+    font-size: 24px;
+    user-select: none;
+    cursor: default;
+    animation-name: snowfall;
+    animation-timing-function: linear;
+    z-index: 999;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(-10px) translateX(0px);
+    }
+    100% {
+        transform: translateY(100vh) translateX(100px);
+    }
+}
+.download-btn {
+    background: linear-gradient(135deg, #00ffcc 0%, #0088ff 100%);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 255, 204, 0.2);
+}
+.back-btn {
+    transition: transform 0.3s ease;
+}
+.back-btn:hover {
+    transform: translateX(-4px);
+}
+.preview-container {
+    background: linear-gradient(135deg, #00ffcc20 0%, #0088ff20 100%);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.preview-overlay {
+    background: linear-gradient(to bottom, transparent 0%, rgba(22, 24, 25, 0.7) 100%);
+}
+.lock-overlay {
+    opacity: 0;
+    backdrop-filter: blur(8px);
+    transition: opacity 0.3s ease;
+}
+.preview-container:hover .lock-overlay {
+    opacity: 1;
+}
+img {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
 /* Add these responsive styles to your styles.css */
 
 @media screen and (max-width: 1366px) {

@@ -10,48 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        .download-btn {
-            background: linear-gradient(135deg, #00ffcc 0%, #0088ff 100%);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 255, 204, 0.2);
-        }
-        .back-btn {
-            transition: transform 0.3s ease;
-        }
-        .back-btn:hover {
-            transform: translateX(-4px);
-        }
-        .preview-container {
-            background: linear-gradient(135deg, #00ffcc20 0%, #0088ff20 100%);
-            user-select: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-        }
-        .preview-overlay {
-            background: linear-gradient(to bottom, transparent 0%, rgba(22, 24, 25, 0.7) 100%);
-        }
-        .lock-overlay {
-            opacity: 0;
-            backdrop-filter: blur(8px);
-            transition: opacity 0.3s ease;
-        }
-        .preview-container:hover .lock-overlay {
-            opacity: 1;
-        }
-        img {
-            pointer-events: none;
-            -webkit-user-drag: none;
-            -khtml-user-drag: none;
-            -moz-user-drag: none;
-            -o-user-drag: none;
-            user-drag: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    
+        
+    
 </head>
 <body class="bg-[#161819] min-h-screen flex flex-col items-center justify-center relative py-20">
     <!-- Back Button -->
@@ -147,5 +109,8 @@
             }
         });
     </script>
+
+    <div id="snow-container"></div>
+    <script src="script.js"></script>
 </body>
 </html> 

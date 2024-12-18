@@ -100,3 +100,40 @@ function init() {
     // Init TypeWriter
     new TypeWriter(txtElement, words, wait);
 } 
+
+function createSnowflake() {
+    const snowflake = document.createElement('div');
+    snowflake.classList.add('snowflake');
+    snowflake.innerHTML = '❄';
+    
+    // Array of winter-themed colors
+    const colors = [
+        '#ffffff', // white
+        '#e6f2ff', // light blue
+        '#f0f8ff', // alice blue
+        '#b3e0ff', // lighter blue
+        '#ccf2ff', // very light cyan
+    ];
+    
+    // Select random color
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    snowflake.style.color = randomColor;
+    
+    // Random starting position
+    snowflake.style.left = Math.random() * 100 + 'vw';
+    
+    // Random animation duration between 5 and 10 seconds
+    const animationDuration = Math.random() * 5 + 5;
+    snowflake.style.animationDuration = animationDuration + 's';
+    
+    // Add to container
+    document.getElementById('snow-container').appendChild(snowflake);
+    
+    // Remove snowflake after animation
+    setTimeout(() => {
+        snowflake.remove();
+    }, animationDuration * 1000);
+}
+
+// Create new snowflakes every 500ms
+setInterval(createSnowflake, 1000);

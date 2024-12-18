@@ -223,5 +223,31 @@
             });
         });
     </script>
+    <div id="snow-container"></div>
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerHTML = '❄';
+            
+            // Random starting position
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            
+            // Random animation duration between 5 and 10 seconds
+            const animationDuration = Math.random() * 5 + 5;
+            snowflake.style.animationDuration = animationDuration + 's';
+            
+            // Add to container
+            document.getElementById('snow-container').appendChild(snowflake);
+            
+            // Remove snowflake after animation
+            setTimeout(() => {
+                snowflake.remove();
+            }, animationDuration * 1000);
+        }
+
+        // Create new snowflakes every 200ms
+        setInterval(createSnowflake, 200);
+    </script>
 </body>
 </html> 
