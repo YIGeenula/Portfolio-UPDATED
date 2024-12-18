@@ -371,4 +371,58 @@ img {
         max-width: 240px;
     }
 }
+
+/* Santa Animation */
+@keyframes walkSanta {
+    from {
+        left: -150px;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes flySanta {
+    0% {
+        bottom: -100px;
+        left: 0;
+        transform: scaleX(-1) rotate(0deg);
+    }
+    50% {
+        bottom: 70%;
+        left: 50%;
+        transform: scaleX(-1) rotate(20deg);
+    }
+    100% {
+        bottom: 100%;
+        left: 100%;
+        transform: scaleX(-1) rotate(35deg);
+    }
+}
+
+.walking-santa {
+    position: fixed;
+    bottom: 20px;
+    height: 100px;
+    display: none;
+    z-index: 999;
+    animation: walkSanta 10s linear;
+    transform: scaleX(-1);
+}
+
+.walking-santa.active {
+    display: block;
+}
+
+.flying-santa {
+    position: fixed;
+    height: 120px;
+    display: none;
+    z-index: 999;
+    animation: flySanta 4s ease-in-out;
+}
+
+.flying-santa.active {
+    display: block;
+}
  

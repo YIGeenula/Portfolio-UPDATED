@@ -29,6 +29,51 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     });
+
+    // Santa Animation
+    const giftBox = document.getElementById('gift-box');
+    const santa = document.getElementById('walking-santa');
+    const flyingSanta = document.getElementById('flying-santa');
+    const santaSound = document.getElementById('santa-sound');
+    let isAnimating = false;
+
+    giftBox.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        if (isAnimating) return;
+        
+        isAnimating = true;
+        santa.classList.add('active');
+        flyingSanta.classList.add('active');
+        
+        // Play Santa sound
+        santaSound.currentTime = 0; // Reset sound to start
+        try {
+            let playPromise = santaSound.play();
+            if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                    // Playback started successfully
+                })
+                .catch(error => {
+                    console.log("Audio playback failed:", error);
+                });
+            }
+        } catch (error) {
+            console.log("Audio playback failed:", error);
+        }
+        
+        // Remove santa and reset after animation completes
+        setTimeout(() => {
+            santa.classList.remove('active');
+            flyingSanta.classList.remove('active');
+            isAnimating = false;
+        }, 10000); // Match this with animation duration (10s)
+
+        // Remove flying santa earlier since its animation is shorter
+        setTimeout(() => {
+            flyingSanta.classList.remove('active');
+        }, 4000); // Match this with flying animation duration (4s)
+    });
 });
 
 class TypeWriter {
