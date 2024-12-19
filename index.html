@@ -11,6 +11,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .snowflake {
+            position: fixed;
+            color: #fff;
+            font-size: 1em;
+            user-select: none;
+            z-index: 1000;
+            pointer-events: none;
+            animation: fall linear forwards;
+            will-change: transform;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-10vh);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
     <!-- Update the splash screen HTML -->
@@ -496,7 +519,11 @@
             snowflake.innerHTML = '❄';
             
             // Random starting position
-            snowflake.style.left = Math.random() * 100 + 'vw';
+            const startingX = Math.random() * 100;
+            snowflake.style.left = startingX + 'vw';
+            
+            // Store the original X position for reference
+            snowflake.dataset.originalX = startingX;
             
             // Random animation duration between 5 and 10 seconds
             const animationDuration = Math.random() * 5 + 5;
@@ -513,6 +540,45 @@
 
         // Create new snowflakes every 200ms
         setInterval(createSnowflake, 200);
+
+        // Mouse interaction
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+            const snowflakes = document.querySelectorAll('.snowflake');
+            
+            snowflakes.forEach(snowflake => {
+                const snowflakeRect = snowflake.getBoundingClientRect();
+                const snowflakeX = snowflakeRect.left + snowflakeRect.width / 2;
+                const snowflakeY = snowflakeRect.top + snowflakeRect.height / 2;
+                
+                // Calculate distance between mouse and snowflake
+                const deltaX = mouseX - snowflakeX;
+                const deltaY = mouseY - snowflakeY;
+                const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+                
+                // Only affect snowflakes within 100px of the mouse
+                const maxDistance = 100;
+                if (distance < maxDistance) {
+                    // Calculate repulsion strength (stronger when closer)
+                    const strength = (1 - distance / maxDistance) * 50;
+                    
+                    // Get original X position
+                    const originalX = parseFloat(snowflake.dataset.originalX);
+                    
+                    // Calculate new X position
+                    const repulsionX = deltaX > 0 ? -strength : strength;
+                    const newX = originalX + repulsionX;
+                    
+                    // Apply the new position with smooth transition
+                    snowflake.style.transform = `translateX(${repulsionX}px)`;
+                    snowflake.style.transition = 'transform 0.3s ease-out';
+                } else {
+                    // Reset position when mouse is far away
+                    snowflake.style.transform = 'translateX(0)';
+                }
+            });
+        });
     </script>
 </body>
 </html> 
