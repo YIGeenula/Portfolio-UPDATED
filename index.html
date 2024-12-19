@@ -33,6 +33,79 @@
                 opacity: 0;
             }
         }
+
+        /* Custom cursor styles */
+        body {
+            cursor: none; /* Hide the default cursor */
+        }
+
+        .christmas-cursor {
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: drop-shadow(0 0 8px rgba(0, 255, 204, 0.5));
+            animation: treeBlink 1.5s infinite;
+        }
+
+        .christmas-cursor::before {
+            content: '🎄';
+            font-size: 36px;
+            transform: translateY(-2px);
+        }
+
+        @keyframes treeBlink {
+            0%, 100% { 
+                opacity: 1; 
+                filter: drop-shadow(0 0 8px rgba(0, 255, 204, 0.5));
+                transform: scale(1);
+            }
+            50% { 
+                opacity: 0.8; 
+                filter: drop-shadow(0 0 4px rgba(0, 255, 204, 0.3));
+                transform: scale(0.95);
+            }
+        }
+
+        /* Add hover effect for clickable elements */
+        a, button, input, textarea, [role="button"] {
+            cursor: none;
+        }
+
+        a:hover ~ .christmas-cursor,
+        button:hover ~ .christmas-cursor,
+        input:hover ~ .christmas-cursor,
+        textarea:hover ~ .christmas-cursor,
+        [role="button"]:hover ~ .christmas-cursor {
+            transform: scale(1.15);
+            animation: treeBlink 0.7s infinite;
+        }
+
+        /* LED trail styles */
+        .led-trail {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9998;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: ledFade 1s linear forwards;
+        }
+
+        @keyframes ledFade {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(0.3);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -579,6 +652,97 @@
                 }
             });
         });
+    </script>
+    <div class="christmas-cursor"></div>
+    <script>
+        // Christmas cursor movement
+        const cursor = document.querySelector('.christmas-cursor');
+        
+        document.addEventListener('mousemove', (e) => {
+            // Update cursor position with smooth animation
+            requestAnimationFrame(() => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+        });
+
+        // Handle cursor leaving the window
+        document.addEventListener('mouseleave', () => {
+            cursor.style.display = 'none';
+        });
+
+        // Handle cursor entering the window
+        document.addEventListener('mouseenter', () => {
+            cursor.style.display = 'flex';
+        });
+
+        // Optional: Add slight delay for smoother movement
+        let mouseX = 0;
+        let mouseY = 0;
+        let cursorX = 0;
+        let cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function updateCursor() {
+            const dx = mouseX - cursorX;
+            const dy = mouseY - cursorY;
+            
+            cursorX += dx * 0.2;
+            cursorY += dy * 0.2;
+            
+            cursor.style.left = cursorX + 'px';
+            cursor.style.top = cursorY + 'px';
+            
+            requestAnimationFrame(updateCursor);
+        }
+
+        updateCursor();
+    </script>
+    <script>
+        // LED trail effect
+        const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+        let lastX = 0;
+        let lastY = 0;
+        let trailDelay = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            // Only create trail every few pixels of movement
+            const dx = e.clientX - lastX;
+            const dy = e.clientY - lastY;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance > 5 && Date.now() - trailDelay > 50) { // Adjust these values to control density
+                createLedTrail(e.clientX, e.clientY);
+                lastX = e.clientX;
+                lastY = e.clientY;
+                trailDelay = Date.now();
+            }
+        });
+
+        function createLedTrail(x, y) {
+            const led = document.createElement('div');
+            led.className = 'led-trail';
+            
+            // Random color from array
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            led.style.backgroundColor = color;
+            led.style.boxShadow = `0 0 10px ${color}`;
+            
+            // Position slightly behind the cursor
+            led.style.left = (x - 5) + 'px';
+            led.style.top = (y - 5) + 'px';
+            
+            document.body.appendChild(led);
+            
+            // Remove after animation
+            setTimeout(() => {
+                led.remove();
+            }, 1000);
+        }
     </script>
 </body>
 </html> 
