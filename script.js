@@ -29,51 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     });
-
-    // Santa Animation
-    const giftBox = document.getElementById('gift-box');
-    const santa = document.getElementById('walking-santa');
-    const flyingSanta = document.getElementById('flying-santa');
-    const santaSound = document.getElementById('santa-sound');
-    let isAnimating = false;
-
-    giftBox.addEventListener('click', (e) => {
-        e.preventDefault();
-        
-        if (isAnimating) return;
-        
-        isAnimating = true;
-        santa.classList.add('active');
-        flyingSanta.classList.add('active');
-        
-        // Play Santa sound
-        santaSound.currentTime = 0; // Reset sound to start
-        try {
-            let playPromise = santaSound.play();
-            if (playPromise !== undefined) {
-                playPromise.then(_ => {
-                    // Playback started successfully
-                })
-                .catch(error => {
-                    console.log("Audio playback failed:", error);
-                });
-            }
-        } catch (error) {
-            console.log("Audio playback failed:", error);
-        }
-        
-        // Remove santa and reset after animation completes
-        setTimeout(() => {
-            santa.classList.remove('active');
-            flyingSanta.classList.remove('active');
-            isAnimating = false;
-        }, 10000); // Match this with animation duration (10s)
-
-        // Remove flying santa earlier since its animation is shorter
-        setTimeout(() => {
-            flyingSanta.classList.remove('active');
-        }, 4000); // Match this with flying animation duration (4s)
-    });
 });
 
 class TypeWriter {
@@ -144,41 +99,4 @@ function init() {
     const wait = 3000;
     // Init TypeWriter
     new TypeWriter(txtElement, words, wait);
-} 
-
-function createSnowflake() {
-    const snowflake = document.createElement('div');
-    snowflake.classList.add('snowflake');
-    snowflake.innerHTML = '❄';
-    
-    // Array of winter-themed colors
-    const colors = [
-        '#ffffff', // white
-        '#e6f2ff', // light blue
-        '#f0f8ff', // alice blue
-        '#b3e0ff', // lighter blue
-        '#ccf2ff', // very light cyan
-    ];
-    
-    // Select random color
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    snowflake.style.color = randomColor;
-    
-    // Random starting position
-    snowflake.style.left = Math.random() * 100 + 'vw';
-    
-    // Random animation duration between 5 and 10 seconds
-    const animationDuration = Math.random() * 5 + 5;
-    snowflake.style.animationDuration = animationDuration + 's';
-    
-    // Add to container
-    document.getElementById('snow-container').appendChild(snowflake);
-    
-    // Remove snowflake after animation
-    setTimeout(() => {
-        snowflake.remove();
-    }, animationDuration * 1000);
 }
-
-// Create new snowflakes every 500ms
-setInterval(createSnowflake, 1000);
