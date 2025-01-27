@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YG CodeBlaze</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" type="x-icon" href="images/Portfolio-Tabicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Update the splash screen HTML -->
+    <div id="splash-screen" class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#161819]">
+        <div class="text-center">
+            <div class="splash-logo mb-8">
+                <img src="images/Portfolio-Navbar-Logo.png" alt="YGCodeBlaze Logo" class="h-32 md:h-40 mx-auto animate-pulse">
+            </div>
+            <div class="loading-dots flex justify-center space-x-2">
+                <div class="dot w-4 h-4 bg-[#00ffcc] rounded-full"></div>
+                <div class="dot w-4 h-4 bg-[#00ffcc] rounded-full"></div>
+                <div class="dot w-4 h-4 bg-[#00ffcc] rounded-full"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-[#1e2124]/90 backdrop-blur-md z-50">
+        <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo - removed padding-left since container already has padding -->
+                <a href="#" class="text-white font-bold text-2xl flex items-center -ml-2">
+                    <img src="images/Portfolio-Navbar-Logo.png" alt="YGCodeBlaze Logo" class="h-14">
+                </a>
+
+                <!-- Desktop Menu - adjusted spacing and moved slightly right -->
+                <div class="hidden md:flex items-center space-x-10 -mr-2">
+                    <a href="#home" class="text-gray-300 hover:text-[#00ffcc] transition-colors nav-link inline-block">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-[#00ffcc] transition-colors nav-link inline-block">About</a>
+                    <a href="#projects" class="text-gray-300 hover:text-[#00ffcc] transition-colors nav-link inline-block">Projects</a>
+                    <a href="#skills" class="text-gray-300 hover:text-[#00ffcc] transition-colors nav-link inline-block">Skills</a>
+                    <a href="#contact" class="text-gray-300 hover:text-[#00ffcc] transition-colors nav-link inline-block">Contact</a>
+                    <!-- Resume Button -->
+                    <a href="resume.html" class="bg-[#00ffcc] text-[#1e2124] px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300">
+                        Resume
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button - moved slightly right -->
+                <button class="md:hidden text-white hover:text-[#00ffcc] transition-colors -mr-2" id="menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-[#1e2124]/95 backdrop-blur-md" id="mobile-menu">
+            <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24 py-4 space-y-3">
+                <a href="#home" class="block text-gray-300 hover:text-[#00ffcc] transition-colors py-2 nav-link">Home</a>
+                <a href="#about" class="block text-gray-300 hover:text-[#00ffcc] transition-colors py-2 nav-link">About</a>
+                <a href="#projects" class="block text-gray-300 hover:text-[#00ffcc] transition-colors py-2 nav-link">Projects</a>
+                <a href="#skills" class="block text-gray-300 hover:text-[#00ffcc] transition-colors py-2 nav-link">Skills</a>
+                <a href="#contact" class="block text-gray-300 hover:text-[#00ffcc] transition-colors py-2 nav-link">Contact</a>
+                <a href="resume.html" class="inline-block bg-[#00ffcc] text-[#1e2124] px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300">
+                    Resume
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center bg-[#161819] px-6 md:px-12 lg:px-16">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col-reverse md:flex-row items-center justify-between">
+                <!-- Left content -->
+                <div class="text-white mt-8 md:mt-0 md:w-1/2">
+                    <p class="text-4xl md:text-5xl mb-2 font-bold">Hi there...</p>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-2 leading-none">
+                        I'm Yasiru Isum Geenula
+                    </h1>
+                    <p class="text-3xl md:text-4xl font-bold mb-8">
+                        I'm skilled with <span class="text-[#00ffcc]" id="typed-text"></span>
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="flex gap-4">
+                        <a href="https://github.com/YIGeenula" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                            <i class="fab fa-github text-white text-xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yigeenula/" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                            <i class="fab fa-linkedin-in text-white text-xl"></i>
+                        </a>
+                        <a href="https://twitter.com/YGeenula" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                            <i class="fab fa-twitter text-white text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/geenuuss/" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                            <i class="fab fa-instagram text-white text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Right content - Profile Image -->
+                <div class="w-64 h-64 md:w-96 md:h-96 relative md:w-1/2 flex justify-center">
+                    <div class="w-full h-full rounded-full overflow-hidden border-4 border-[#00ffcc] shadow-[0_0_30px_#00ffcc] max-w-[384px]">
+                        <img src="images/ProPic01.jpg" alt="Profile" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="min-h-screen flex items-center bg-[#1e2124] py-16 px-6 md:px-12 lg:px-16">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- Left side - Profile Image -->
+                <div class="md:w-1/2">
+                    <div class="w-64 h-64 md:w-96 md:h-96 relative mx-auto">
+                        <div class="w-full h-full rounded-full overflow-hidden border-4 border-[#00ffcc] shadow-[0_0_30px_#00ffcc]">
+                            <img src="images/ProPic02.jpg" alt="Profile" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                <!-- Right side - Content -->
+                <div class="md:w-1/2 text-white">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8">About Me</h2>
+                    <p class="text-lg leading-relaxed">
+                        Hi there, I'm Yasiru Isum Geenula, and I'm super passionate about software engineering and crafting websites. I specialize in WordPress, frontend development, and designing how things look and feel online. I'm all about creating smooth, easy-to-use digital experiences. I love paying attention to the little details and coming up with fresh ideas. I always strive to go above and beyond, even when I'm working alone. My goal? To keep honing my skills and making cool stuff on the web!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="min-h-screen flex items-center bg-[#161819] py-20 px-6 md:px-12 lg:px-24">
+        <div class="container mx-auto max-w-7xl">
+            <h2 class="text-5xl font-bold text-white text-center mb-16">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- Project Card 1 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#00ffcc] to-[#0088ff]">
+                    <img src="images/Proj01.png" alt="Mobile App UI" class="w-full h-full object-cover transition-all duration-500 group-hover:blur-sm">
+                    <!-- Hover Content -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0743FD]/95 via-[#0743FD]/80 to-transparent translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+                        <div class="h-full p-6 flex flex-col justify-center translate-y-5 text-white text-center">
+                            <h3 class="text-3xl font-bold mb-3">Messaging App</h3>
+                            <p class="text-sm text-white/90 mb-4">
+                                A modern messaging app simplifies communication, offering helpful features for both individuals and businesses, enabling quick information sharing and smoother collaboration.
+                            </p>
+                            <a href="https://www.figma.com/file/XhHQbjLXKEIGqvjNw87IlP/Chat-App?type=design&node-id=0%3A1&mode=design&t=NDdYVf61A7Qnsrup-1" target="_blank" class="inline-block bg-white text-black px-8 py-3 rounded-full mx-auto hover:bg-opacity-90 transition-all duration-300">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#00ffcc] to-[#0088ff]">
+                    <img src="images/Proj02.png" alt="Desktop App" class="w-full h-full object-cover transition-all duration-500 group-hover:blur-sm">
+                    <!-- Hover Content -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0743FD]/95 via-[#0743FD]/80 to-transparent translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+                        <div class="h-full p-6 flex flex-col justify-center translate-y-5 text-white text-center">
+                            <h3 class="text-3xl font-bold mb-3">Gaming Client</h3>
+                            <p class="text-sm text-white/90 mb-4">
+                                A gaming platform provides easy access to many fun experiences, giving players lots of options and ensuring everyone has a great time playing games.
+                            </p>
+                            <a href="https://www.figma.com/file/MpGYe0n2q7QHUSLoJAiFM9/Game-Client?type=design&node-id=0%3A1&mode=design&t=FwTU1SVZpXCMCF6a-1" target="_blank" class="inline-block bg-white text-black px-8 py-3 rounded-full mx-auto hover:bg-opacity-90 transition-all duration-300">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#00ffcc] to-[#0088ff]">
+                    <img src="images/Proj03.png" alt="Web Design" class="w-full h-full object-cover transition-all duration-500 group-hover:blur-sm">
+                    <!-- Hover Content -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0743FD]/95 via-[#0743FD]/80 to-transparent translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+                        <div class="h-full p-6 flex flex-col justify-center translate-y-5 text-white text-center">
+                            <h3 class="text-3xl font-bold mb-3">Booking Website</h3>
+                            <p class="text-sm text-white/90 mb-4">
+                                A user-friendly booking website lets you easily reserve what you need, whether it's a hotel room, a table at a restaurant, or tickets for an event.
+                            </p>
+                            <a href="https://www.figma.com/file/H9ICzxxsNMX7bnx0OYW7YU/Hotel-Booking?type=design&node-id=0%3A1&mode=design&t=FwTU1SVZpXCMCF6a-1" target="_blank" class="inline-block bg-white text-black px-8 py-3 rounded-full mx-auto hover:bg-opacity-90 transition-all duration-300">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- See More Button -->
+            <div class="flex justify-center mt-12">
+                <a href="projects.html" class="bg-[#00ffcc] text-[#161819] px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300">
+                    See More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="min-h-screen flex items-center bg-[#1e2124] py-20 px-6 md:px-12 lg:px-24">
+        <div class="container mx-auto max-w-7xl">
+            <h2 class="text-5xl font-bold text-white text-center mb-16">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- Web Development Card -->
+                <div class="bg-[#1e2124] p-8 rounded-2xl skill-card">
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 flex items-center justify-center text-[#00ffcc]">
+                                <i class="fa-solid fa-code text-4xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Web Development</h3>
+                        </div>
+                        <p class="text-gray-300 text-sm">
+                            Proficient in building responsive and dynamic websites using modern web technologies, ensuring optimal performance and user experience.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Frontend Development Card -->
+                <div class="bg-[#1e2124] p-8 rounded-2xl skill-card">
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 flex items-center justify-center text-[#00ffcc]">
+                                <i class="fa-brands fa-wordpress text-4xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Frontend Development</h3>
+                        </div>
+                        <p class="text-gray-300 text-sm">
+                            Skilled in frontend development using WordPress, proficient in crafting dynamic and visually appealing websites with HTML, CSS, and JavaScript integration.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- UI/UX Design Card -->
+                <div class="bg-[#1e2124] p-8 rounded-2xl skill-card">
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 flex items-center justify-center text-[#00ffcc]">
+                                <i class="fa-brands fa-figma text-4xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">UI/UX Design</h3>
+                        </div>
+                        <p class="text-gray-300 text-sm">
+                            Experienced in UI/UX design with Figma, adept at creating intuitive and visually stunning interfaces that enhance user engagement and satisfaction.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="min-h-screen flex items-center bg-[#161819] py-16 px-6 md:px-12 lg:px-16">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-5xl font-bold text-white text-center mb-16">Contact Me</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Get In Touch -->
+                <div class="contact-card p-8">
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-semibold text-white mb-8">Get In Touch</h3>
+                        <div class="space-y-6">
+                            <!-- Email -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400">Email</p>
+                                    <p class="text-white">ygcodeblaze@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400">Phone</p>
+                                    <p class="text-white">+94 71 269 6251</p>
+                                </div>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10">
+                                    <i class="fas fa-location-dot text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400">Location</p>
+                                    <p class="text-white">Kalutara, Sri Lanka</p>
+                                </div>
+                            </div>
+
+                            <!-- Social Media Icons -->
+                            <div class="pt-4 border-t border-gray-700">
+                                <p class="text-gray-400 mb-4">Follow Me</p>
+                                <div class="flex gap-4">
+                                    <a href="https://github.com/YIGeenula" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                                        <i class="fab fa-github text-white"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/yigeenula/" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                                        <i class="fab fa-linkedin-in text-white"></i>
+                                    </a>
+                                    <a href="https://twitter.com/YGeenula" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                                        <i class="fab fa-twitter text-white"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/geenuuss/" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors">
+                                        <i class="fab fa-instagram text-white"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Send Message -->
+                <div class="contact-card p-8">
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-semibold text-white mb-8">Send Message</h3>
+                        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="space-y-6">
+
+                            <input type="hidden" name="access_key" value="ccaf1f73-d67e-4944-be29-7272727e9ada">
+                            <!-- Name Input -->
+                            <div class="relative">
+                                <input type="text" id="name" name="name" placeholder="Your Name" 
+                                    class="w-full px-4 py-3 bg-[#282b30] rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00ffcc]" 
+                                    required>
+                            </div>
+
+                            <!-- Email Input -->
+                            <div class="relative">
+                                <input type="email" id="email" name="email" placeholder="Your Email" 
+                                    class="w-full px-4 py-3 bg-[#282b30] rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00ffcc]" 
+                                    required>
+                            </div>
+
+                            <!-- Message Input -->
+                            <div class="relative">
+                                <textarea id="message" name="message" placeholder="Your Message" rows="4" 
+                                    class="w-full px-4 py-3 bg-[#282b30] rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00ffcc] resize-none" 
+                                    required></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" 
+                                class="w-full bg-[#00ffcc] text-[#161819] py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#1e2124] text-white py-16 px-6 md:px-12 lg:px-24 relative overflow-hidden">
+        <div class="container mx-auto max-w-7xl">
+            <!-- Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Brand Section -->
+                <div class="space-y-3">
+                    <h3 class="text-xl font-bold">YG CodeBlaze</h3>
+                    <p class="text-gray-400 text-sm">
+                        Creating digital experiences that make a difference. Let's build something amazing together.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-[#00ffcc] transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-[#00ffcc] transition-colors">About</a></li>
+                        <li><a href="projects.html" target="_blank" class="text-gray-400 hover:text-[#00ffcc] transition-colors">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-[#00ffcc] transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400 flex items-center gap-2">
+                            <i class="fas fa-envelope text-[#00ffcc]"></i>
+                            <a href="mailto:ygcodeblaze@gmail.com" class="hover:text-[#00ffcc] transition-colors">ygcodeblaze@gmail.com</a>
+                        </li>
+                        <li class="text-gray-400 flex items-center gap-2">
+                            <i class="fas fa-phone text-[#00ffcc]"></i>
+                            <a href="tel:+94712696251" class="hover:text-[#00ffcc] transition-colors">+94 71 269 6251</a>
+                        </li>
+                        <li class="text-gray-400 flex items-center gap-2">
+                            <i class="fas fa-location-dot text-[#00ffcc]"></i>
+                            <span>Kalutara, Sri Lanka</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Social Links -->
+                <div class="space-y-3">
+                    <h4 class="text-lg font-semibold">Follow Me</h4>
+                    <div class="flex justify-between">
+                        <a href="https://github.com/YIGeenula" target="_blank" class="text-gray-400 hover:text-[#00ffcc] transition-colors text-2xl">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yigeenula/" target="_blank" class="text-gray-400 hover:text-[#00ffcc] transition-colors text-2xl">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/YGeenula" target="_blank" class="text-gray-400 hover:text-[#00ffcc] transition-colors text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/geenuuss/" target="_blank" class="text-gray-400 hover:text-[#00ffcc] transition-colors text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+                <p>&copy; 2024. YGCodeBlaze. All rights reserved. Designed and Developed by Yasiru Isum Geenula | YG CodeBlaze.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add this before the closing body tag -->
+    <button id="scroll-to-top" class="fixed bottom-8 right-8 bg-[#00ffcc] text-[#161819] w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-opacity-90 focus:outline-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <!-- Add this before closing body tag -->
+    <script>
+        // Mobile Menu Toggle
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Toggle menu on button click
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Toggle icon between bars and times
+            const icon = menuButton.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close menu when clicking a nav link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                // Reset icon to bars
+                const icon = menuButton.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+                // Reset icon to bars
+                const icon = menuButton.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
+        });
+    </script>
+</body>
+</html> 

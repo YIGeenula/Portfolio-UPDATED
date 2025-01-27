@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - YG CodeBlaze</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" type="x-icon" href="images/Portfolio-Tabicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+        
+    
+</head>
+<body class="bg-[#161819] min-h-screen flex flex-col items-center justify-center relative py-20">
+    <!-- Back Button -->
+    <a href="index.html" class="back-btn fixed top-8 left-8 text-gray-400 hover:text-[#00ffcc] flex items-center gap-2 text-sm">
+        <i class="fas fa-arrow-left"></i>
+        <span>Back to Portfolio</span>
+    </a>
+
+    <!-- Main Content -->
+    <div class="w-full max-w-4xl px-6 flex flex-col md:flex-row items-center gap-12">
+        <!-- Preview Section -->
+        <div class="w-full md:w-2/3">
+            <div class="preview-container rounded-3xl overflow-hidden relative">
+                <img 
+                    src="images/Resume.jpg" 
+                    alt="Resume Preview" 
+                    class="w-full h-auto rounded-3xl"
+                >
+                <!-- Lock Overlay (Shows on Hover) -->
+                <div class="lock-overlay absolute inset-0 bg-[#161819]/80 flex flex-col items-center justify-center">
+                    <i class="fas fa-lock text-[#00ffcc] text-4xl mb-4"></i>
+                    <p class="text-white font-semibold text-xl">Preview Locked</p>
+                    <p class="text-gray-400 text-sm mt-2">Download to view full resume</p>
+                </div>
+                <!-- Bottom Gradient -->
+                <div class="preview-overlay absolute inset-0 flex items-end justify-center p-6 pointer-events-none">
+                    <p class="text-gray-300 text-sm text-center">
+                        Preview of my professional resume
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Section -->
+        <div class="w-full md:w-1/3 flex flex-col items-center gap-8">
+            <!-- Download Button -->
+            <div class="text-center w-full">
+                <h1 class="text-white text-2xl font-bold mb-6">My Resume</h1>
+                <a 
+                    href="assets/CV.pdf" 
+                    download
+                    class="download-btn inline-flex items-center gap-3 text-[#161819] font-semibold py-4 px-8 rounded-full text-lg w-full justify-center"
+                >
+                    <i class="fas fa-download"></i>
+                    <span>Download Resume</span>
+                </a>
+            </div>
+
+            <!-- File Info -->
+            <div class="text-center">
+                <p class="text-gray-400 text-sm">PDF Format • 1.05 MB</p>
+                <p class="text-gray-500 text-sm mt-1">Last updated: March 2024</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Text -->
+    <p class="fixed bottom-8 text-gray-500 text-sm px-6 text-center">
+        © 2024 YG CodeBlaze. All rights reserved.
+    </p>
+
+    <script>
+        // Disable right click
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Disable keyboard shortcuts
+        document.addEventListener('keydown', function(event) {
+            // Prevent Ctrl+S, Ctrl+U, Ctrl+Shift+I, F12
+            if (
+                (event.ctrlKey && event.key === 's') || 
+                (event.ctrlKey && event.key === 'u') ||
+                (event.ctrlKey && event.shiftKey && event.key === 'i') ||
+                event.key === 'F12'
+            ) {
+                event.preventDefault();
+            }
+        });
+
+        // Disable drag and drop
+        document.addEventListener('dragstart', function(event) {
+            event.preventDefault();
+        });
+
+        // Show warning message when trying to copy
+        document.addEventListener('copy', function(event) {
+            event.preventDefault();
+        });
+
+        // Disable text selection
+        document.addEventListener('selectstart', function(event) {
+            if (event.target.nodeName !== 'INPUT' && event.target.nodeName !== 'TEXTAREA') {
+                event.preventDefault();
+            }
+        });
+    </script>
+
+    <div id="snow-container"></div>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - YG CodeBlaze</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" type="x-icon" href="images/Portfolio-Tabicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#161819]">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-[#1e2124]/90 backdrop-blur-md z-50">
+        <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="index.html" class="text-white font-bold text-2xl flex items-center -ml-2">
+                    <img src="images/Portfolio-Navbar-Logo.png" alt="YGCodeBlaze Logo" class="h-14">
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-10 -mr-2">
+                    <a href="index.html" class="text-gray-300 hover:text-[#00ffcc] transition-colors nav-link inline-block">Home</a>
+                    <a href="index.html#about" class="text-gray-300 hover:text-[#00ffcc] transition-colors nav-link inline-block">About</a>
+                    <a href="index.html#projects" class="text-[#00ffcc] transition-colors nav-link inline-block">Projects</a>
+                    <a href="index.html#skills" class="text-gray-300 hover:text-[#00ffcc] transition-colors nav-link inline-block">Skills</a>
+                    <a href="index.html#contact" class="text-gray-300 hover:text-[#00ffcc] transition-colors nav-link inline-block">Contact</a>
+                    <a href="resume.html" class="bg-[#00ffcc] text-[#1e2124] px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300">
+                        Resume
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white hover:text-[#00ffcc] transition-colors -mr-2" id="menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-[#1e2124]/95 backdrop-blur-md" id="mobile-menu">
+            <div class="container mx-auto max-w-7xl px-6 md:px-12 lg:px-24 py-4 space-y-3">
+                <a href="index.html" class="block text-gray-300 hover:text-[#00ffcc] transition-colors py-2 nav-link">Home</a>
+                <a href="index.html#about" class="block text-gray-300 hover:text-[#00ffcc] transition-colors py-2 nav-link">About</a>
+                <a href="index.html#projects" class="block text-[#00ffcc] transition-colors py-2 nav-link">Projects</a>
+                <a href="index.html#skills" class="block text-gray-300 hover:text-[#00ffcc] transition-colors py-2 nav-link">Skills</a>
+                <a href="index.html#contact" class="block text-gray-300 hover:text-[#00ffcc] transition-colors py-2 nav-link">Contact</a>
+                <a href="#" class="inline-block bg-[#00ffcc] text-[#1e2124] px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300">
+                    Resume
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="pt-32 pb-20 px-6 md:px-12 lg:px-24">
+        <div class="container mx-auto max-w-7xl">
+            <h1 class="text-5xl font-bold text-white text-center mb-16">All Projects</h1>
+            
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#00ffcc] to-[#0088ff]">
+                    <img src="images/Proj01.png" alt="Mobile App UI" class="w-full h-full object-cover transition-all duration-500 group-hover:blur-sm">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0743FD]/95 via-[#0743FD]/80 to-transparent translate-y-full group-hover:translate-y-0 transition-all duration-500">
+                        <div class="h-full p-6 flex flex-col justify-center translate-y-5 text-white text-center">
+                            <h3 class="text-3xl font-bold mb-3">Messaging App</h3>
+                            <p class="text-sm text-white/90 mb-4">
+                                A modern messaging app simplifies communication, offering helpful features for both individuals and businesses.
+                            </p>
+                            <a href="https://www.figma.com/file/XhHQbjLXKEIGqvjNw87IlP/Chat-App?type=design&node-id=0%3A1&mode=design&t=NDdYVf61A7Qnsrup-1" target="_blank" class="inline-block bg-white text-black px-8 py-3 rounded-full mx-auto hover:bg-opacity-90 transition-all duration-300">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#00ffcc] to-[#0088ff]">
+                    <img src="images/Proj02.png" alt="Desktop App" class="w-full h-full object-cover transition-all duration-500 group-hover:blur-sm">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0743FD]/95 via-[#0743FD]/80 to-transparent translate-y-full group-hover:translate-y-0 transition-all duration-500">
+                        <div class="h-full p-6 flex flex-col justify-center translate-y-5 text-white text-center">
+                            <h3 class="text-3xl font-bold mb-3">Gaming Client</h3>
+                            <p class="text-sm text-white/90 mb-4">
+                                A gaming platform provides easy access to many fun experiences, giving players lots of options.
+                            </p>
+                            <a href="https://www.figma.com/file/MpGYe0n2q7QHUSLoJAiFM9/Game-Client?type=design&node-id=0%3A1&mode=design&t=FwTU1SVZpXCMCF6a-1" target="_blank" class="inline-block bg-white text-black px-8 py-3 rounded-full mx-auto hover:bg-opacity-90 transition-all duration-300">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#00ffcc] to-[#0088ff]">
+                    <img src="images/Proj03.png" alt="Web Design" class="w-full h-full object-cover transition-all duration-500 group-hover:blur-sm">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0743FD]/95 via-[#0743FD]/80 to-transparent translate-y-full group-hover:translate-y-0 transition-all duration-500">
+                        <div class="h-full p-6 flex flex-col justify-center translate-y-5 text-white text-center">
+                            <h3 class="text-3xl font-bold mb-3">Booking Website</h3>
+                            <p class="text-sm text-white/90 mb-4">
+                                A user-friendly booking website lets you easily reserve what you need, whether it's a hotel room or event tickets.
+                            </p>
+                            <a href="https://www.figma.com/file/H9ICzxxsNMX7bnx0OYW7YU/Hotel-Booking?type=design&node-id=0%3A1&mode=design&t=FwTU1SVZpXCMCF6a-1" target="_blank" class="inline-block bg-white text-black px-8 py-3 rounded-full mx-auto hover:bg-opacity-90 transition-all duration-300">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#00ffcc] to-[#0088ff]">
+                    <img src="images/P4.jpg" alt="E-commerce Website" class="w-full h-full object-cover transition-all duration-500 group-hover:blur-sm">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0743FD]/95 via-[#0743FD]/80 to-transparent translate-y-full group-hover:translate-y-0 transition-all duration-500">
+                        <div class="h-full p-6 flex flex-col justify-center translate-y-5 text-white text-center">
+                            <h3 class="text-3xl font-bold mb-3">My Portfolio Website</h3>
+                            <p class="text-sm text-white/90 mb-4">
+                                Ongoing Project.
+                            </p>
+                            <a href="https://ygcodeblaze.netlify.app/" target="_blank" class="inline-block bg-white text-black px-8 py-3 rounded-full mx-auto hover:bg-opacity-90 transition-all duration-300">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#00ffcc] to-[#0088ff]">
+                    <img src="images/P5.jpg" alt="Portfolio Website" class="w-full h-full object-cover transition-all duration-500 group-hover:blur-sm">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0743FD]/95 via-[#0743FD]/80 to-transparent translate-y-full group-hover:translate-y-0 transition-all duration-500">
+                        <div class="h-full p-6 flex flex-col justify-center translate-y-5 text-white text-center">
+                            <h3 class="text-3xl font-bold mb-3">Glamour Haven Website</h3>
+                            <p class="text-sm text-white/90 mb-4">
+                                Ongoing Project.
+                            </p>
+                            <a href="https://glamour-haven.netlify.app/" target="_blank" class="inline-block bg-white text-black px-8 py-3 rounded-full mx-auto hover:bg-opacity-90 transition-all duration-300">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#00ffcc] to-[#0088ff]">
+                    <img src="images/P6.jpg" alt="Blog Website" class="w-full h-full object-cover transition-all duration-500 group-hover:blur-sm">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0743FD]/95 via-[#0743FD]/80 to-transparent translate-y-full group-hover:translate-y-0 transition-all duration-500">
+                        <div class="h-full p-6 flex flex-col justify-center translate-y-5 text-white text-center">
+                            <h3 class="text-3xl font-bold mb-3">TeckyBuilds Website</h3>
+                            <p class="text-sm text-white/90 mb-4">
+                                Ongoing Project.
+                            </p>
+                            <a href="https://teckybuilds.netlify.app/" target="_blank" class="inline-block bg-white text-black px-8 py-3 rounded-full mx-auto hover:bg-opacity-90 transition-all duration-300">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="fixed bottom-8 right-8 bg-[#00ffcc] text-[#161819] w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-opacity-90 focus:outline-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // Toggle menu on button click
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Toggle icon between bars and times
+            const icon = menuButton.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close menu when clicking a nav link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                // Reset icon to bars
+                const icon = menuButton.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+                // Reset icon to bars
+                const icon = menuButton.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
+        });
+
+        // Scroll to Top Button Functionality
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopButton.classList.add('visible');
+            } else {
+                scrollToTopButton.classList.remove('visible');
+            }
+        });
+
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    <div id="snow-container"></div>
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerHTML = '❄';
+            
+            // Random starting position
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            
+            // Random animation duration between 5 and 10 seconds
+            const animationDuration = Math.random() * 5 + 5;
+            snowflake.style.animationDuration = animationDuration + 's';
+            
+            // Add to container
+            document.getElementById('snow-container').appendChild(snowflake);
+            
+            // Remove snowflake after animation
+            setTimeout(() => {
+                snowflake.remove();
+            }, animationDuration * 1000);
+        }
+
+        // Create new snowflakes every 200ms
+        setInterval(createSnowflake, 200);
+    </script>
+</body>
+</html> 

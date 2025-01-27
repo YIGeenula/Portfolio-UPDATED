@@ -1,0 +1,354 @@
+/* Add this at the top of your styles.css */
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 5rem;
+}
+
+.txt {
+    border-right: 0.2rem solid #00ffcc;
+    padding-right: 0.2rem;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { border-right-color: transparent }
+    50% { border-right-color: #00ffcc }
+    100% { border-right-color: transparent }
+} 
+
+.group:hover img {
+    transform: scale(1.05);
+    filter: blur(4px);
+}
+
+.group {
+    aspect-ratio: 4/5;
+    padding: 0;
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.group img {
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+
+/* Skills card styles */
+.skill-card {
+    position: relative;
+    background: #1e2124;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        #00ffcc 90deg,
+        transparent 180deg,
+        transparent 360deg
+    );
+    animation: rotate 4s linear infinite;
+    filter: drop-shadow(0 0 15px rgba(0, 255, 204, 0.5));
+}
+
+.skill-card::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #1e2124;
+    border-radius: 0.875rem;
+    z-index: 0;
+}
+
+.skill-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6),
+                0 0 20px rgba(0, 255, 204, 0.2);
+    transition: all 0.3s ease;
+} 
+
+/* Add these styles for the contact form */
+#contact-form input,
+#contact-form textarea {
+    transition: all 0.3s ease;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 255, 204, 0.2);
+} 
+
+/* Add these styles for the nav links hover effect */
+.nav-link {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #00ffcc;
+    transition: width 0.3s ease;
+    z-index: 1;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* For mobile menu links specifically */
+#mobile-menu .nav-link::after {
+    bottom: 0;
+}
+
+/* Add these styles for the splash screen */
+#splash-screen {
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+#splash-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.splash-logo {
+    animation: pulse 2s infinite;
+}
+
+/* Replace the loading bar styles with these dot loading styles */
+.loading-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #00ffcc;
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.dot:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% { 
+        transform: scale(0);
+    }
+    40% { 
+        transform: scale(1);
+    }
+}
+
+/* Add these styles for the scroll-to-top button */
+#scroll-to-top {
+    z-index: 99;
+    transform: translateY(20px);
+}
+
+#scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#scroll-to-top:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 255, 204, 0.3);
+}
+
+/* Add these styles for the contact cards animation */
+.contact-card {
+    position: relative;
+    background: #1e2124;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        #00ffcc 90deg,
+        transparent 180deg,
+        transparent 360deg
+    );
+    animation: rotate 4s linear infinite;
+    filter: drop-shadow(0 0 15px rgba(0, 255, 204, 0.5));
+}
+
+.contact-card::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #1e2124;
+    border-radius: 0.875rem;
+    z-index: 0;
+}
+
+.contact-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6),
+                0 0 20px rgba(0, 255, 204, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Add these responsive styles to your styles.css */
+
+@media screen and (max-width: 1366px) {
+    /* Hero Section Adjustments */
+    #home {
+        min-height: 100vh;
+        padding-top: 5rem;
+    }
+
+    #home .text-5xl,
+    #home .text-6xl {
+        font-size: 2.5rem;
+    }
+
+    #home .text-4xl {
+        font-size: 2rem;
+    }
+
+    /* Profile Image Size Adjustment */
+    .w-96.h-96 {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    /* Section Padding Adjustments */
+    section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    /* Project Cards */
+    .group {
+        max-width: 280px;
+        aspect-ratio: 3/4;
+    }
+
+    /* Skills Cards */
+    .skill-card {
+        padding: 1.5rem;
+    }
+
+    /* Contact Form */
+    .contact-card {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    /* Project Cards */
+    .group {
+        max-width: 240px;
+    }
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #00ffcc 0%, #0088ff 100%);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 255, 204, 0.2);
+}
+.back-btn {
+    transition: transform 0.3s ease;
+}
+.back-btn:hover {
+    transform: translateX(-4px);
+}
+.preview-container {
+    background: linear-gradient(135deg, #00ffcc20 0%, #0088ff20 100%);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.preview-overlay {
+    background: linear-gradient(to bottom, transparent 0%, rgba(22, 24, 25, 0.7) 100%);
+}
+.lock-overlay {
+    opacity: 0;
+    backdrop-filter: blur(8px);
+    transition: opacity 0.3s ease;
+}
+.preview-container:hover .lock-overlay {
+    opacity: 1;
+}
+img {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+ 
